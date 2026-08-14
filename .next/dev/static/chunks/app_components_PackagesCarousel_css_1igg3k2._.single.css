@@ -1,0 +1,113 @@
+/* [project]/app/components/PackagesCarousel.css [app-client] (css) */
+.packages-carousel {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.packages-viewport {
+  scrollbar-width: none;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  grid-auto-columns: calc(33.3333% - 11.3333px);
+  grid-auto-flow: column;
+  gap: 17px;
+  padding: 5px 2px 25px;
+  display: grid;
+  overflow-x: auto;
+}
+
+.packages-viewport::-webkit-scrollbar {
+  display: none;
+}
+
+.packages-viewport > .package-card-scene {
+  scroll-snap-align: start;
+}
+
+.packages-carousel-footer {
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  display: flex;
+}
+
+.packages-carousel-navigation {
+  align-items: center;
+  gap: 10px;
+  display: flex;
+}
+
+.packages-carousel-navigation button {
+  color: #352d29;
+  cursor: pointer;
+  background: none;
+  border: 1px solid #352d2959;
+  min-width: 38px;
+  height: 38px;
+  font: 19px Playfair Display, serif;
+  transition: color .2s, background .2s;
+}
+
+.packages-carousel-navigation button:hover {
+  color: #f5f0e7;
+  background: #5c1917;
+  border-color: #5c1917;
+}
+
+.packages-carousel-navigation .packages-pause {
+  letter-spacing: .14em;
+  width: auto;
+  padding: 0 13px;
+  font: 9px DM Sans, sans-serif;
+}
+
+.packages-pause span {
+  margin-left: 6px;
+  font-size: 12px;
+}
+
+.packages-pagination {
+  align-items: center;
+  gap: 7px;
+  display: flex;
+}
+
+.packages-pagination button {
+  cursor: pointer;
+  background: #c3b7aa;
+  border: 0;
+  border-radius: 999px;
+  width: 7px;
+  height: 7px;
+  padding: 0;
+  transition: width .25s, background .25s;
+}
+
+.packages-pagination button.is-active {
+  background: #5c1917;
+  width: 25px;
+}
+
+@media (max-width: 999px) {
+  .packages-viewport {
+    grid-auto-columns: calc(50% - 8.5px);
+  }
+}
+
+@media (max-width: 719px) {
+  .packages-viewport {
+    grid-auto-columns: 100%;
+    padding-bottom: 20px;
+  }
+
+  .packages-carousel-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .packages-pagination {
+    order: -1;
+  }
+}
+
+/*# sourceMappingURL=app_components_PackagesCarousel_css_1igg3k2._.single.css.map*/
